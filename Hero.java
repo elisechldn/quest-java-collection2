@@ -1,4 +1,4 @@
-public class Hero {
+public class Hero implements Comparable<Hero> {
 
     // attributs
     private String name;
@@ -26,5 +26,11 @@ public class Hero {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    // Implémentation de la méthode compareTo
+    @Override
+    public int compareTo(Hero heroes) {
+        return this.name.compareTo(heroes.getName());
     }
 }
